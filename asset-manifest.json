@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/codebridge-challenge/static/css/main.b3295992.chunk.css",
+    "main.js": "/codebridge-challenge/static/js/main.bf4ff982.chunk.js",
+    "main.js.map": "/codebridge-challenge/static/js/main.bf4ff982.chunk.js.map",
+    "runtime-main.js": "/codebridge-challenge/static/js/runtime-main.e671b0d0.js",
+    "runtime-main.js.map": "/codebridge-challenge/static/js/runtime-main.e671b0d0.js.map",
+    "static/js/2.96be3630.chunk.js": "/codebridge-challenge/static/js/2.96be3630.chunk.js",
+    "static/js/2.96be3630.chunk.js.map": "/codebridge-challenge/static/js/2.96be3630.chunk.js.map",
+    "index.html": "/codebridge-challenge/index.html",
+    "static/css/main.b3295992.chunk.css.map": "/codebridge-challenge/static/css/main.b3295992.chunk.css.map",
+    "static/js/2.96be3630.chunk.js.LICENSE.txt": "/codebridge-challenge/static/js/2.96be3630.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e671b0d0.js",
+    "static/js/2.96be3630.chunk.js",
+    "static/css/main.b3295992.chunk.css",
+    "static/js/main.bf4ff982.chunk.js"
+  ]
+}
