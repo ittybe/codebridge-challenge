@@ -1,2 +1,0 @@
-(this["webpackJsonpcodebridge-challenge"]=this["webpackJsonpcodebridge-challenge"]||[]).push([[0],{11:function(e,n,c){"use strict";c.r(n);var t=c(1),r=c.n(t),o=c(3),i=c.n(o),d=(c(8),c(9),c(0));var s=function(){return Object(d.jsx)("div",{className:"App",children:"hello world"})};i.a.render(Object(d.jsx)(r.a.StrictMode,{children:Object(d.jsx)(s,{})}),document.getElementById("root"))},8:function(e,n,c){},9:function(e,n,c){}},[[11,1,2]]]);
-//# sourceMappingURL=main.bf4ff982.chunk.js.map
