@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { getBookByISBN, getBookFullDesc } from "../api/itbookApi";
+import { Link } from "react-router-dom";
 
 function Book(props) {
     const [bookData, setBookData] = useState({
-        "author": "",
+        "authors": "",
         "title": "",
         "subtitle": "",
         "isbn13": "",
@@ -40,9 +41,10 @@ function Book(props) {
             <div>
                 {bookData.desc}
             </div>
-            <a href={bookData.url}>
+            {/* <a href={bookData.url}>
                 full description 
-            </a>
+            </a> */}
+            <Link to="/codebridge-challenge">Go to home page</Link>
         </div>
     )    
 }

@@ -32,7 +32,7 @@ export async function getBookByISBN(isbn13) {
         if (res.data.error === "0") {
             const { authors, title, subtitle, isbn13, year, pages, desc, price, image, url } = res.data;
             return {
-                "author": authors,
+                "authors": authors,
                 "title": title,
                 "subtitle": subtitle,
                 "isbn13": isbn13,
