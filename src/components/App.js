@@ -44,7 +44,7 @@ class App extends React.Component {
       // check book summary description for having keywords (each keyword in title gives plus 1)
       let indexDesc = 0;
       words.forEach(word => {
-        indexDesc += countOfMatches(word, bookSummary.Desc)
+        indexDesc += countOfMatches(word, bookSummary.desc.slice(0, 101))
       });
       // save search matches index with Id 
       index += indexDesc + (indexTitle * 2)
