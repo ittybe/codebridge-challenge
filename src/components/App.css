@@ -2,11 +2,13 @@
   background-color: var(--highlight-color);
 }
 .app__books-summaries {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem 0.625rem;
+  margin-bottom: 3rem;
 }
 
 .app {
-
-} 
+  max-width: 1370px;
+  margin: 50px auto;
+}
