@@ -2,13 +2,14 @@ import './App.css';
 import { getListOfNewReleasedBooks } from "../api/itbookApi.js"
 import BookSummary from './BookSummary';
 import React, { useState } from 'react';
+import { TextField } from '@mui/material';
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       booksSummaries: [],
-      booksToDisplay: [], // contains id and search matches index 
+      booksToDisplay: undefined, // contains id and search matches index 
       searchQuery: ""
     }
   }
@@ -69,7 +70,7 @@ class App extends React.Component {
     })
   }
   getBookSummaries() {
-    if (this.state.booksToDisplay.length === 0) {
+    if (this.state.booksToDisplay === undefined) {
       return this.state.booksSummaries
     }
     else {
@@ -84,28 +85,30 @@ class App extends React.Component {
   }
   render() {
     return (
-        <div className="app">
-          <div className="app__search">
-            <form action="" onSubmit={(e) => this.handleSubmit(e)}>
-              <input type="text" onChange={(e) => this.handleChange(e)} />
-              <input type="submit" value="Search" />
-            </form>
-          </div>
-          <div className="app__books-summaries">
-            {
-              this.getBookSummaries().map((book, i) => {
-                return <BookSummary
-                  key={book.isbn13}
-                  searchQuery={this.state.searchQuery}
-                  title={book.title}
-                  imageUrl={book.imageUrl}
-                  year={book.year}
-                  desc={book.desc.slice(0, 101)}
-                  isbn13={book.isbn13} />
-              })
-            }
-          </div>
+      <div className="app">
+        <div className="app__search">
+          <form action="" onSubmit={(e) => this.handleSubmit(e)}>
+            <TextField sx={{width: "40%", boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px'}} label="search for keywords" color="primary" variant="outlined" onChange={(e) => this.handleChange(e)} />
+          </form>
         </div>
+        <div className="app__results-count">
+          Results: {this.getBookSummaries().length}
+        </div>
+        <div className="app__books-summaries">
+          {
+            this.getBookSummaries().map((book, i) => {
+              return <BookSummary
+                key={book.isbn13}
+                searchQuery={this.state.searchQuery}
+                title={book.title}
+                imageUrl={book.imageUrl}
+                year={book.year}
+                desc={book.desc.slice(0, 101)}
+                isbn13={book.isbn13} />
+            })
+          }
+        </div>
+      </div>
     )
   }
 }

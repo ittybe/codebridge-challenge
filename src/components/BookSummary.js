@@ -9,8 +9,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { styled } from '@mui/material/styles';
 import "./BookSummary.css"
-import theme from "./theme";
-import { ThemeProvider } from '@mui/material/styles';
 
 const useStyles = makeStyles(({
     yearWrapper: {
@@ -102,45 +100,43 @@ export default function BookSummary(props) {
     const styles = useStyles();
     return (
         <div className="book-summary">
-            <ThemeProvider theme={theme}>
-                <BookSummaryCard className="book-summary-card">
-                    <CardMedia
-                        component="img"
-                        height="300"
-                        image={props.imageUrl}
-                        alt={props.title + " image"}
-                    />
-                    <CardContent className={styles.content}>
-                        <Typography gutterBottom className={styles.yearWrapper} variant="body2" color="text.secondary" component="div" >
-                            <CalendarTodayIcon fontSize="smaller" className={styles.calendarIcon}></CalendarTodayIcon>
-                            <div className={styles.year}>
-                                {props.year}
-                            </div>
-                        </Typography>
-                        <Typography gutterBottom  component="div" className={styles.title}>
-                            <Highlighter
-                                highlightClassName={"highlight-text"}
-                                findChunks={findKeywords}
-                                autoEscape={true}
-                                searchWords={props.searchQuery.split(" ")}
-                                textToHighlight={props.title}></Highlighter>
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            <Highlighter
-                                highlightClassName={"highlight-text"}
-                                findChunks={findKeywords}
-                                autoEscape={true}
-                                searchWords={props.searchQuery.split(" ")}
-                                textToHighlight={props.desc + "..."}></Highlighter>
-                        </Typography>
-                        <Typography>
-                            <Link underline="none" href={`codebridge-challenge/books/${props.isbn13}`}>Read more</Link>
-                        </Typography>
-                        {/* <ReactRouterLink to={`books/${props.isbn13}`} className="book-summary__link">
+            <BookSummaryCard className="book-summary-card">
+                <CardMedia
+                    component="img"
+                    height="300"
+                    image={props.imageUrl}
+                    alt={props.title + " image"}
+                />
+                <CardContent className={styles.content}>
+                    <Typography gutterBottom className={styles.yearWrapper} variant="body2" color="text.secondary" component="div" >
+                        <CalendarTodayIcon fontSize="smaller" className={styles.calendarIcon}></CalendarTodayIcon>
+                        <div className={styles.year}>
+                            {props.year}
+                        </div>
+                    </Typography>
+                    <Typography gutterBottom component="div" className={styles.title}>
+                        <Highlighter
+                            highlightClassName={"highlight-text"}
+                            findChunks={findKeywords}
+                            autoEscape={true}
+                            searchWords={props.searchQuery.split(" ")}
+                            textToHighlight={props.title}></Highlighter>
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        <Highlighter
+                            highlightClassName={"highlight-text"}
+                            findChunks={findKeywords}
+                            autoEscape={true}
+                            searchWords={props.searchQuery.split(" ")}
+                            textToHighlight={props.desc + "..."}></Highlighter>
+                    </Typography>
+                    <Typography>
+                        <Link underline="none" href={`codebridge-challenge/books/${props.isbn13}`}>Read more</Link>
+                    </Typography>
+                    {/* <ReactRouterLink to={`books/${props.isbn13}`} className="book-summary__link">
                         </ReactRouterLink> */}
-                    </CardContent>
-                </BookSummaryCard>
-            </ThemeProvider>
+                </CardContent>
+            </BookSummaryCard>
         </div>
         // <div className="book-summary">
         //     <Highlighter
