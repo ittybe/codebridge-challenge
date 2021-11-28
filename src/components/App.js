@@ -84,28 +84,28 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="App">
-        <div>
-          <form action="" onSubmit={(e) => this.handleSubmit(e)}>
-            <input type="text" onChange={(e) => this.handleChange(e)} />
-            <input type="submit" value="Search" />
-          </form>
+        <div className="app">
+          <div className="app__search">
+            <form action="" onSubmit={(e) => this.handleSubmit(e)}>
+              <input type="text" onChange={(e) => this.handleChange(e)} />
+              <input type="submit" value="Search" />
+            </form>
+          </div>
+          <div className="app__books-summaries">
+            {
+              this.getBookSummaries().map((book, i) => {
+                return <BookSummary
+                  key={book.isbn13}
+                  searchQuery={this.state.searchQuery}
+                  title={book.title}
+                  imageUrl={book.imageUrl}
+                  year={book.year}
+                  desc={book.desc.slice(0, 101)}
+                  isbn13={book.isbn13} />
+              })
+            }
+          </div>
         </div>
-        <div>
-          {
-            this.getBookSummaries().map((book, i) => {
-              return <BookSummary
-                key={book.isbn13}
-                searchQuery={this.state.searchQuery}
-                title={book.title}
-                imageUrl={book.imageUrl}
-                year={book.year}
-                desc={book.desc.slice(0, 101)}
-                isbn13={book.isbn13} />
-            })
-          }
-        </div>
-      </div>
     )
   }
 }

@@ -12,7 +12,7 @@ import "./BookSummary.css"
 import theme from "./theme";
 import { ThemeProvider } from '@mui/material/styles';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(({
     yearWrapper: {
         display: "flex",
         alignItems: "center"
@@ -22,13 +22,25 @@ const useStyles = makeStyles(() => ({
         marginBottom: "0px",
         lineHeight: "1",
     },
+    linkWrapper: {
+        marginTop: "auto"
+    },
+    content: {
+        display: "grid",
+        gridTemplateRows: "25px 80px 80px",
+        gap: "0px 0px",
+    },
+    title: {
+        fontSize: "1.2rem",
+        lineHeight: 1.3
+    }
 }));
 
 const BookSummaryCard = styled(Card)(({ theme }) => ({
     borderRadius: 16,
     boxShadow: '0 8px 16px 0 #BDC9D7',
     overflow: 'hidden',
-    maxWidth: 300
+    maxWidth: 300,
 }))
 
 // ({
@@ -89,7 +101,7 @@ export default function BookSummary(props) {
     }
     const styles = useStyles();
     return (
-        <div classNama="book-summary">
+        <div className="book-summary">
             <ThemeProvider theme={theme}>
                 <BookSummaryCard className="book-summary-card">
                     <CardMedia
@@ -98,14 +110,14 @@ export default function BookSummary(props) {
                         image={props.imageUrl}
                         alt={props.title + " image"}
                     />
-                    <CardContent>
+                    <CardContent className={styles.content}>
                         <Typography gutterBottom className={styles.yearWrapper} variant="body2" color="text.secondary" component="div" >
                             <CalendarTodayIcon fontSize="smaller" className={styles.calendarIcon}></CalendarTodayIcon>
                             <div className={styles.year}>
                                 {props.year}
                             </div>
                         </Typography>
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography gutterBottom  component="div" className={styles.title}>
                             <Highlighter
                                 highlightClassName={"highlight-text"}
                                 findChunks={findKeywords}
@@ -121,7 +133,9 @@ export default function BookSummary(props) {
                                 searchWords={props.searchQuery.split(" ")}
                                 textToHighlight={props.desc + "..."}></Highlighter>
                         </Typography>
-                        <Link underline="none" href={`codebridge-challenge/books/${props.isbn13}`}>Read more</Link>
+                        <Typography>
+                            <Link underline="none" href={`codebridge-challenge/books/${props.isbn13}`}>Read more</Link>
+                        </Typography>
                         {/* <ReactRouterLink to={`books/${props.isbn13}`} className="book-summary__link">
                         </ReactRouterLink> */}
                     </CardContent>

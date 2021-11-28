@@ -1,9 +1,13 @@
+.book-summary {
+  margin: 0 45px 45px 0;
+}
+
 .book-summary-card {
   border-radius: 16px;
-  box-shadow: 0 8px 16px 0 #BDC9D7;
+  box-shadow: 0 8px 16px 0 #bdc9d7;
   overflow: hidden;
 }
 
 .book-summary__link {
-    text-decoration: none;
+  text-decoration: none;
 }

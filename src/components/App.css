@@ -1,8 +1,12 @@
 .highlight-text {
-  background-color: #FFF96E;
+  background-color: var(--highlight-color);
 }
-.book-summary {
+.app__books-summaries {
   display: flex;
-  flex-direction: column;
-  margin: 5px;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
+
+.app {
+
+} 

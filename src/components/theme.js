@@ -1,6 +1,9 @@
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
+    typography: {
+        fontFamily: 'Montserrat',
+    },
     components: {
         // Name of the component
         MuiLink: {
@@ -11,12 +14,13 @@ const theme = createTheme({
                     textDecoration: "none",
                     color: "black",
                     fontWeight: "700",
-                    "&:hover" : {
+                    "&:hover": {
                         color: "gray"
                     }
                 },
             },
         },
+
     },
 });
 
