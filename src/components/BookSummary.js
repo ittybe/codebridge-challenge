@@ -136,7 +136,7 @@ export default function BookSummary(props) {
                             textToHighlight={props.desc + "..."}></Highlighter>
                     </Typography>
                     <Typography>
-                        <Link underline="none" href={`codebridge-challenge/books/${props.isbn13}`}>
+                        <Link underline="none" href={`/codebridge-challenge/books/${props.isbn13}`}>
                             Read more
                             <ArrowForwardIcon fontSize="smaller" className={styles.arrowIcon}></ArrowForwardIcon>
                         </Link>
