@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/codebridge-challenge/static/css/main.3696075a.chunk.css",
-    "main.js": "/codebridge-challenge/static/js/main.312793ae.chunk.js",
-    "main.js.map": "/codebridge-challenge/static/js/main.312793ae.chunk.js.map",
+    "main.js": "/codebridge-challenge/static/js/main.64ac9afa.chunk.js",
+    "main.js.map": "/codebridge-challenge/static/js/main.64ac9afa.chunk.js.map",
     "runtime-main.js": "/codebridge-challenge/static/js/runtime-main.e671b0d0.js",
     "runtime-main.js.map": "/codebridge-challenge/static/js/runtime-main.e671b0d0.js.map",
     "static/js/2.5a160e8c.chunk.js": "/codebridge-challenge/static/js/2.5a160e8c.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.e671b0d0.js",
     "static/js/2.5a160e8c.chunk.js",
     "static/css/main.3696075a.chunk.css",
-    "static/js/main.312793ae.chunk.js"
+    "static/js/main.64ac9afa.chunk.js"
   ]
 }
