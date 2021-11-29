@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/codebridge-challenge/static/css/main.7061f71c.chunk.css",
-    "main.js": "/codebridge-challenge/static/js/main.aef76ad9.chunk.js",
-    "main.js.map": "/codebridge-challenge/static/js/main.aef76ad9.chunk.js.map",
+    "main.css": "/codebridge-challenge/static/css/main.3696075a.chunk.css",
+    "main.js": "/codebridge-challenge/static/js/main.312793ae.chunk.js",
+    "main.js.map": "/codebridge-challenge/static/js/main.312793ae.chunk.js.map",
     "runtime-main.js": "/codebridge-challenge/static/js/runtime-main.e671b0d0.js",
     "runtime-main.js.map": "/codebridge-challenge/static/js/runtime-main.e671b0d0.js.map",
-    "static/js/2.5d0cba85.chunk.js": "/codebridge-challenge/static/js/2.5d0cba85.chunk.js",
-    "static/js/2.5d0cba85.chunk.js.map": "/codebridge-challenge/static/js/2.5d0cba85.chunk.js.map",
+    "static/js/2.5a160e8c.chunk.js": "/codebridge-challenge/static/js/2.5a160e8c.chunk.js",
+    "static/js/2.5a160e8c.chunk.js.map": "/codebridge-challenge/static/js/2.5a160e8c.chunk.js.map",
     "index.html": "/codebridge-challenge/index.html",
-    "static/css/main.7061f71c.chunk.css.map": "/codebridge-challenge/static/css/main.7061f71c.chunk.css.map",
-    "static/js/2.5d0cba85.chunk.js.LICENSE.txt": "/codebridge-challenge/static/js/2.5d0cba85.chunk.js.LICENSE.txt"
+    "static/css/main.3696075a.chunk.css.map": "/codebridge-challenge/static/css/main.3696075a.chunk.css.map",
+    "static/js/2.5a160e8c.chunk.js.LICENSE.txt": "/codebridge-challenge/static/js/2.5a160e8c.chunk.js.LICENSE.txt",
+    "static/media/Book.css": "/codebridge-challenge/static/media/landscape.8d10fd8d.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.e671b0d0.js",
-    "static/js/2.5d0cba85.chunk.js",
-    "static/css/main.7061f71c.chunk.css",
-    "static/js/main.aef76ad9.chunk.js"
+    "static/js/2.5a160e8c.chunk.js",
+    "static/css/main.3696075a.chunk.css",
+    "static/js/main.312793ae.chunk.js"
   ]
 }
