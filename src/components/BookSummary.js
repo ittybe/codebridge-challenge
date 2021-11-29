@@ -8,6 +8,7 @@ import Link from "@mui/material/Link";
 import { makeStyles } from '@material-ui/core/styles';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { styled } from '@mui/material/styles';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import "./BookSummary.css"
 
 const useStyles = makeStyles(({
@@ -25,12 +26,16 @@ const useStyles = makeStyles(({
     },
     content: {
         display: "grid",
-        gridTemplateRows: "25px 80px 80px",
+        gridTemplateRows: "25px 80px 90px",
         gap: "0px 0px",
     },
     title: {
         fontSize: "1.2rem",
         lineHeight: 1.3
+    },
+    arrowIcon: {
+        marginLeft: "5px",
+        verticalAlign: "middle"
     }
 }));
 
@@ -100,7 +105,7 @@ export default function BookSummary(props) {
     const styles = useStyles();
     return (
         <div className="book-summary">
-            <BookSummaryCard className="book-summary-card">
+            <Card className="book-summary-card" sx={{ margin: "0px auto", maxWidth: "300px" }}>
                 <CardMedia
                     component="img"
                     height="300"
@@ -114,7 +119,7 @@ export default function BookSummary(props) {
                             {props.year}
                         </div>
                     </Typography>
-                    <Typography gutterBottom component="div" className={styles.title}>
+                    <Typography gutterBottom component="div" variant="h3">
                         <Highlighter
                             highlightClassName={"highlight-text"}
                             findChunks={findKeywords}
@@ -131,12 +136,15 @@ export default function BookSummary(props) {
                             textToHighlight={props.desc + "..."}></Highlighter>
                     </Typography>
                     <Typography>
-                        <Link underline="none" href={`codebridge-challenge/books/${props.isbn13}`}>Read more</Link>
+                        <Link underline="none" href={`codebridge-challenge/books/${props.isbn13}`}>
+                            Read more
+                            <ArrowForwardIcon fontSize="smaller" className={styles.arrowIcon}></ArrowForwardIcon>
+                        </Link>
                     </Typography>
                     {/* <ReactRouterLink to={`books/${props.isbn13}`} className="book-summary__link">
                         </ReactRouterLink> */}
                 </CardContent>
-            </BookSummaryCard>
+            </Card>
         </div>
         // <div className="book-summary">
         //     <Highlighter

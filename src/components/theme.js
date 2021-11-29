@@ -25,6 +25,23 @@ const theme = createTheme({
                 },
             },
         },
+        MuiCard: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 16,
+                    boxShadow: '0 8px 16px 0 #BDC9D7',
+                    overflow: 'hidden',
+                }
+            }
+        },
+        MuiTypography: {
+            styleOverrides: {
+                h3: {
+                    fontSize: "1.2rem",
+                    lineHeight: 1.3
+                }
+            }
+        }
 
     },
 });

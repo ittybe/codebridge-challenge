@@ -87,8 +87,8 @@ class App extends React.Component {
     return (
       <div className="app">
         <div className="app__search">
-          <form action="" onSubmit={(e) => this.handleSubmit(e)}>
-            <TextField sx={{width: "40%", boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px'}} label="search for keywords" color="primary" variant="outlined" onChange={(e) => this.handleChange(e)} />
+          <form action="" onSubmit={(e) => this.handleSubmit(e)} className="app-form">
+            <TextField className="app-form__text-field" sx={{width: "40%", boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px'}} label="search for keywords" color="primary" variant="outlined" onChange={(e) => this.handleChange(e)} />
           </form>
         </div>
         <div className="app__results-count">

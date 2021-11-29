@@ -3,16 +3,13 @@
 }
 .app__books-summaries {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 1.5rem 0.625rem;
   margin-bottom: 3rem;
 }
-
 .app {
-  max-width: 1370px;
-  margin: 50px auto;
+  margin: 50px;
 }
-
 .app__results-count {
   font-weight: bold;
   font-size: large;
@@ -20,3 +17,35 @@
   border-bottom: solid lightgray 1px;
   margin: 20px 0px;
 }
+.app-form__text-field {
+  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+  width: 200px;
+}
+@media screen and (min-width: 768px) {
+  .app__books-summaries {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .app-form__text-field {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1048px) {
+  .app__books-summaries {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .app__books-summaries {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .app {
+    max-width: 1248px;
+    margin: 50px auto;
+  }
+}
+/* .app__books-summaries {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 0.625rem;
+  margin-bottom: 3rem;
+} */
