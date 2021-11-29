@@ -31,7 +31,7 @@ class App extends React.Component {
     }
     // split search query by words
     const q = this.state.searchQuery;
-    const words = q.split(" ");
+    const words = q.split(" ").filter((word) => word !== "");
     let result = []
     // go through books Summaries array
     for (let i = 0; i < this.state.booksSummaries.length; i++) {
